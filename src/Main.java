@@ -2,8 +2,12 @@
 public class Main {
     public static void main(String [] args) {
 
-        Person vasya = new Person("Vasya", "qwerty", "qwerty");
-        Validator.checkAuthorization(vasya);
+        boolean result = Validator.checkAuthorization("vasya", "qwerty", "qwert");
+        if(result){
+            System.out.println("Логин и пароль прошли проверку");
+        } else {
+            System.out.println("Логин и/ или пароль некорректен");
+        }
     }
 
 }
